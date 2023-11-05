@@ -19,7 +19,7 @@ public:
 
 	ResourceManager(ResourceManager&& other) {
 
-		data = (other.w);
+		data = (other.data);
 		other.data=nullptr;
 	}
 
@@ -44,9 +44,10 @@ public:
 
 	}
 	// metoda double get
-	double get() {
+	double get() 
+	{
 		return data->get();
-}
+	}
 
 
 
