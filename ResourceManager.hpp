@@ -44,7 +44,7 @@ public:
 		delete data;
 	}
 
-	}
+	
 	// metoda double get
 	double get() 
 	{
