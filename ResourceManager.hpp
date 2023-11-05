@@ -6,25 +6,27 @@
 class ResourceManager
 {
 public:
-	ResourceManager() {
+
+	ResourceManager() 
+	{
 		// konstruktor domyœlny klasy ResourceManager
 		data = new Resource();
 	}
 	
-	ResourceManager(const ResourceManager& other) {
-		
+	ResourceManager(const ResourceManager& other) 
+	{
 		data = new Resource();
 		*data = *(other.data);
 	}
 
-	ResourceManager(ResourceManager&& other) {
-
+	ResourceManager(ResourceManager&& other) 
+	{
 		data = (other.data);
 		other.data=nullptr;
 	}
 
-	ResourceManager& operator=(const ResourceManager& other) {
-
+	ResourceManager& operator=(const ResourceManager& other) 
+	{
 		*data = *other.data;
 		return *this;
 	}
@@ -48,8 +50,6 @@ public:
 	{
 		return data->get();
 	}
-
-
 
 private: 
 	Resource* data;
